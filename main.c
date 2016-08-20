@@ -13,8 +13,10 @@
 int		main(int ac, char **av)
 {
 	int i = 0;
+	char a = 'a';
 	ft_printf("test =%d=\n", 8642);
 	ft_printf("test =%s=\n", "awegqDVCAEwef");
-	ft_printf("test =%c=\n", "a");
+	ft_printf("test =%c=\n", a);
+	ft_printf("\n=%d= =%c= =%s= =%c= =%d=\n", 42, 'H', "abcdefg", 'H', 373526);
 	return(1);
 }

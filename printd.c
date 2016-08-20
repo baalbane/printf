@@ -10,7 +10,7 @@
 
 #include "ft_printf.h"
 
-int		printd(va_list arg, int *tabarg)
+int		printd(va_list arg, args *new)
 {
 ft_putnbr(va_arg(arg, int));
 	return(1);

@@ -21,3 +21,12 @@ int *inittab()
 	return(tab);
 }
 
+args	*initlist()
+{
+	args	*new;
+
+	new = malloc(sizeof(args));
+	new->tabarg = inittab();
+	return(new);
+}
+

@@ -10,8 +10,9 @@
 
 #include "ft_printf.h"
 
-int		printc(va_list arg, int *tabarg)
+int		printc(va_list arg, args *new)
 {
-	ft_putchar(va_arg(arg, int));
+	int a = va_arg(arg, int);
+	ft_putchar((char)a);
 	return(1);
 }

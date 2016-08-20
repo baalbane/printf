@@ -1,12 +1,12 @@
 #include "ft_printf.h"
 
-int launchprintarg(va_list arg, const char *str, int *tabarg, int *index)
+int launchprintarg(va_list arg, const char *str, args *new, int *index)
 {
 	if(str[*index] == 's' || str[*index] == 'S')
 	{
 		if(str[*index] == 'S')
-			tabarg[7] = 2;
-		prints(arg, tabarg);
+			new->tabarg[7] = 2;
+		prints(arg, new);
 	}
 	else if (str[*index] == 'p')
 	{
@@ -15,8 +15,8 @@ int launchprintarg(va_list arg, const char *str, int *tabarg, int *index)
 	else if (str[*index] == 'd' || str[*index] == 'D')
 	{
 		if(str[*index] == 'D')
-			tabarg[7] = 2;
-		printd(arg, tabarg);
+			new->tabarg[7] = 2;
+		printd(arg, new);
 	}
 	else if (str[*index] == 'i')
 	{
@@ -36,7 +36,7 @@ int launchprintarg(va_list arg, const char *str, int *tabarg, int *index)
 	}
 	else if (str[*index] == 'c' || str[*index] == 'C')
 	{
-
+		printc(arg, new);
 	}
 	else
 	{
